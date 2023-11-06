@@ -1,0 +1,33 @@
+{
+    "restaurantType": [{
+            "type": "Fine Dining"
+        },
+        {
+            "type": "Casual Dining"
+        },
+        {
+            "type": "Fast Casual"
+        },
+        {
+            "type": "Ghost Restaurant"
+        },
+        {
+            "type": "Fast Food"
+        },
+        {
+            "type": "Cafe"
+        },
+        {
+            "type": "Buffet Style"
+        },
+        {
+            "type": "Pub"
+        },
+        {
+            "type": "Bistro"
+        },
+        {
+            "type": "Cafeteria"
+        }
+    ]
+}

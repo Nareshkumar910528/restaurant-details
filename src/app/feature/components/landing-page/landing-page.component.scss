@@ -1,0 +1,47 @@
+.landing-page {
+    .header {
+        height: 50px;
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 1), rgb(0, 26, 255));
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        font-style: italic;
+        font-family: cursive;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .forms-div {
+        padding-top: 75px;
+        .forms-input {
+            width: 90%;
+            border-radius: 5px;
+            padding: 7px;
+            background-color: beige;
+        }
+        .type-dropdown {
+            width: 90%;
+            height: 100%;
+            background-color: beige;
+        }
+        .save-btn {
+            width: 100%;
+            border-radius: 5px;
+            padding: 7px;
+            background-color: lightgrey;
+        }
+        button:disabled {
+            background-color: lightgrey;
+        }
+        button:hover:not([disabled]) {
+            background-color: green;
+            color: white;
+        }
+    }
+    .restaurant-listings-content {
+        padding-top: 30px;
+    }
+}

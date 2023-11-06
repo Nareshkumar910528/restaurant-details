@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-6 top-margin-15">
+        <input class="search-forms-input" type="text" placeholder="Type to search for restaurant..." id="myInput" [(ngModel)]="searchRestaurantName">
+    </div>
+    <div class="col-md-6 top-margin-15">
+        <select class="form-select-sm type-dropdown" aria-label=".form-select-sm example" (change)="onFilterRestaurantType($event)" id="$event">
+            <option selected disabled>Filter by Restaurant Type</option>
+            <option *ngFor="let data of restaurantTypes">{{data}}</option>
+        </select>
+    </div>
+</div>
+
+<div class="data-table" id="myTable">
+    <table class="full-width">
+        <thead class="table-header">
+            <tr class="header-height">
+                <th class="center-text-align left-border col-width-10"></th>
+                <th class="center-text-align col-width-30">Restaurant Name</th>
+                <th class="center-text-align col-width-30">Type of Restaurant</th>
+                <th class="center-text-align right-border col-width-30 ">Restaurant Coordinate</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-body">
+            <tr class="body-height" *ngIf="showData === false">
+                <td colspan="5" class="center-text-align">
+                    <span>No Restaurant Details Found</span>
+                </td>
+            </tr>
+            <tr class="body-height" *ngFor="let details of restaurantDetails | searchFilter: searchRestaurantName, let index = index;">
+                <td class="center-text-align left-border">
+                    <div class="cursor-pointer" (click)="onDeleteRestaurant(details.id)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16" color="red">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                        </svg>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div class="underlined-restaurant-name">
+                        <span (click)="onViewRestaurantCoordinate(index)" class="italic-font cursor-pointer">{{details.restaurantName}}</span>
+                    </div>
+                </td>
+                <td class="center-text-align">
+                    <div>
+                        <span class="italic-font">{{details.restaurantType}}</span>
+                    </div>
+                </td>
+                <td class="center-text-align right-border">
+                    <div>
+                        <span class="italic-font">{{details.latitude}}, {{details.longitude}}</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

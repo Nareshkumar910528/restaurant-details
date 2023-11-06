@@ -1,0 +1,90 @@
+.top-margin-15 {
+    padding-bottom: 15px;
+    .search-forms-input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 7px;
+        background-color: beige;
+    }
+    .type-dropdown {
+        width: 100%;
+        height: 100%;
+        background-color: beige;
+    }
+}
+
+.data-table {
+    table th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+    table th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+    .full-width {
+        width: 100%;
+        border-collapse: collapse;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-style: hidden;
+        box-shadow: 0 0 0 1px #666;
+        margin-bottom: 40px;
+        .table-header {
+            background-color: #e54b22;
+            .header-height {
+                height: 40px;
+                .center-text-align {
+                    text-align: center;
+                }
+                .right-border {
+                    border-right: 1px solid #000000;
+                }
+                .left-border {
+                    border-left: 1px solid #000000;
+                }
+                .col-width-30 {
+                    width: 30%;
+                }
+                .col-width-10 {
+                    width: 10%;
+                }
+                th {
+                    border-top: 1px solid #000000;
+                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid #000000;
+                    border-left: 1px solid #000000;
+                }
+            }
+        }
+        .table-body {
+            .body-height {
+                height: 50px;
+                td {
+                    border-top: 1px solid #000000;
+                    border-bottom: 1px solid #000000;
+                    border-right: 1px solid #000000;
+                    border-left: 1px solid #000000;
+                }
+                .center-text-align {
+                    text-align: center;
+                }
+                .right-border {
+                    border-right: 1px solid #000000;
+                }
+                .left-border {
+                    border-left: 1px solid #000000;
+                }
+                .italic-font {
+                    font-style: italic;
+                }
+                .cursor-pointer {
+                    cursor: pointer;
+                }
+                .underlined-restaurant-name {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

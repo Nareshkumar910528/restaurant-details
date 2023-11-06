@@ -1,0 +1,28 @@
+{
+  "restaurantDetails": [
+    {
+      "guid": "015f5a11-fdd0-f455-b0a6-e8b007a557d3",
+      "restaurantName": "Marinis 57",
+      "latitude": "3.15670",
+      "longitude": "101.71158",
+      "restaurantType": "Fine Dining",
+      "id": 1
+    },
+    {
+      "guid": "89c408be-ad8e-b486-97e8-f9dbbb4b5155",
+      "restaurantName": "Bosporus Turkish Cuisine",
+      "latitude": "25.19233",
+      "longitude": "55.27169",
+      "restaurantType": "Buffet Style",
+      "id": 2
+    },
+    {
+      "guid": "c01b1de8-b43d-4400-cf29-c28cb0b945eb",
+      "restaurantName": "Little Birria Mascot",
+      "latitude": "-33.92271",
+      "longitude": "151.17775",
+      "restaurantType": "Casual Dining",
+      "id": 3
+    }
+  ]
+}

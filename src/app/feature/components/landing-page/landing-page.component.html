@@ -1,0 +1,40 @@
+<div class="landing-page">
+    <div class="header">
+        <span>Restaurant Details</span>
+    </div>
+
+
+    <div class="container">
+        <div class="forms-div">
+            <div class="row">
+                <div class="col-md-4" [formGroup]="restaurantDetailsForm">
+                    <input class="forms-input" type="text" (input)="onInputRestaurantName($event)" formControlName="restaurantName" placeholder="Restaurant Name">
+                </div>
+
+                <div class="col-md-2">
+                    <select class="form-select-sm type-dropdown" aria-label=".form-select-sm example" (change)="onSelectRestaurantType($event)">
+                        <option selected disabled>Type of Restaurant</option>
+                        <option *ngFor="let data of typeOfRestaurant">{{data["type"]}}</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2" [formGroup]="restaurantDetailsForm">
+                    <input class="forms-input" type="number" (input)="onInputLatitude($event)" formControlName="latitude" placeholder="Latitude" oninput="this.value = this.value.replace(/[^0-9,.-]/g, '').replace(/(,.*?),(.*,)?/, '$1');">
+                </div>
+
+                <div class="col-md-2" [formGroup]="restaurantDetailsForm">
+                    <input class="forms-input" type="number" (input)="onInputLongitude($event)" formControlName="longitude" placeholder="Longitude" oninput="this.value = this.value.replace(/[^0-9,.-]/g, '').replace(/(,.*?),(.*,)?/, '$1');">
+                </div>
+
+                <div class="col-md-2">
+                    <button class="save-btn" (click)="onSaveRestaurantDetails()" [disabled]="!restaurantDetailsForm.valid || !validateFormCompletion()">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-listings-content">
+            <restaurant-listings></restaurant-listings>
+        </div>
+    </div>
+
+</div>
